@@ -1,0 +1,122 @@
+@import "null.scss";
+
+$linearPink: #A60E57;
+$linearBlue: #0F58E5;
+$activeColor: rgba(0, 133, 255, .46);
+$infoColor: #FF0000;
+$tabColor: #E8E8E8;
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right top, $linearPink, $linearBlue);
+}
+
+.page {
+    backdrop-filter: blur(200px);
+    background-color: rgba(58, 0, 0, .3);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .vk-block {
+        position: absolute;
+        right: 2%;
+        top: 5%;
+        overflow: hidden;
+    }
+
+    .logo-block {
+        position: absolute;
+        bottom: 3%;
+        left: 2%;
+    }
+
+    .container {
+        width: 60%;
+        margin: 0 auto;
+
+        .header {
+            color: #fff;
+            background: rgba(232, 232, 232, .2);
+            margin: 0 auto;
+            text-align: center;
+            width: 50%;
+
+            h1 {
+                padding: 16px 30px;
+            }
+        }
+
+        .question-block {
+            color: #fff;
+            background: rgba(232, 232, 232, .2);
+            margin: 0 auto;
+            text-align: center;
+            width: 30%;
+            margin-top: 45px;
+            padding: 16px 30px;
+        }
+
+        .types-blocks {
+            color: #fff;
+            display: flex;
+            width: 65%;
+            margin: 0 auto;
+            justify-content: space-between;
+            margin-top: 45px;
+
+            img {
+                height: 130px;
+            }
+
+            .info {
+                display: flex;
+                cursor: pointer;
+                flex-direction: column;
+                justify-content: center;
+                transition: opacity .5s linear;
+
+                &:hover .content {
+                    background: $activeColor;
+                    transition: background .2s linear;
+                }
+
+                &:hover .who-is {
+                    background: transparent;
+                    transition: background .2s linear;
+                }
+
+                .content {
+                    background: rgba(232, 232, 232, .2);
+                    transition: background .2s linear;
+                    padding: 35px 35px;
+                    border-radius: 20px;
+                }
+
+                .who-is {
+                    transition: background .2s linear;
+                    text-align: center;
+                    width: 60%;
+                    margin: 10px auto;
+                    background: rgba(255, 0, 0, .5);
+                    border-radius: 7px;
+                }
+            }
+        }
+    }
+}
+
+// waves
+
+@keyframes wave {
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+
